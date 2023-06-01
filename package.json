@@ -1,0 +1,32 @@
+{
+  "name": "dimp-contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/actocracy/dimp",
+  "author": "DerrekJulian <derrekjulian@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "truffle compile",
+    "ganache": "ganache-cli -d -m 'square plunge border man fit cliff candy hold youth police pelican abstract' -e 100 --accounts 100",
+    "deploy:dev": "truffle migrate --network development --reset",
+    "deploy:goerli": "truffle migrate --network goerli --reset",
+    "verify:goerli": "truffle run verify DIMP --network goerli",
+    "deploy:kovan": "truffle migrate --network kovan --reset",
+    "verify:kovan": "truffle run verify DIMP --network kovan",
+    "deploy:mainnet": "NODE_ENV=production truffle migrate --network mainnet --reset",
+    "verify:mainnet": "truffle run verify DIMP --network mainnet"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.0",
+    "@truffle/hdwallet-provider": "^1.7.0",
+    "dotenv": "^10.0.0",
+    "truffle-plugin-verify": "^0.5.18"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-bn": "^0.3.0",
+    "ganache-cli": "^6.12.2",
+    "truffle": "^5.5.0-tezos.4",
+    "truffle-assertions": "^0.9.2"
+  }
+}
