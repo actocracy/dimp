@@ -52,10 +52,10 @@ module.exports = async function (deployer) {
       { address: Addresses.Ecosystem, tokens: percentage(100n) },
 
       // game activities
-      { address: Addresses.GameActivity, tokens: 71183762748n * 10n**6n },
+      { address: Addresses.GameActivity, tokens: percentage(300n) },
 
       // liquidity pool
-      { address: Addresses.LiquidityPool, tokens: percentage(540n) - 71183762748n * 10n**6n },
+      { address: Addresses.LiquidityPool, tokens: percentage(240n) },
 
     ];
 
